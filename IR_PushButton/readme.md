@@ -9,3 +9,5 @@ Summarizing the idea of this project is to adapt an infrared remote control, in 
 It is important to note that the physical button will not lose its functionality, since ATtiny will be connected in parallel to it, so there is no need to remove it.
 
 You need to find out by a multimeter, whether the signal is high or low before pressing it, and what happens when pressing it. If the signal is reversed, this project will probably work. Check the normal signal (without pressing the button) is correct in the code.
+
+![circuit](https://github.com/dantavares/Arttiny/blob/main/IR_PushButton/circuit.png?raw=true)
