@@ -1,38 +1,37 @@
-/***********************************************************
-*     Termostato positivo, controlado por relê  V1.0       *
-*                                                          * 
-* Este projeto usa um termistor NTC 10k, como sensor de    *
-* temperatura ambiente, um display TM1637 para exibir      *
-* valores e um potênciometro de 100k para setar a          *
-* temperatura desejada.                                    *
-*                                                          *
-* Use um aquecedor comum ligado ao relê, caso a            *                                               
-* temperatura não seja a desejada, o relê irá ligar o      * 
-* aquecedor, até que chegue na temperatura definida pelo   *
-* potenciômetro. Os valores de temperatura ambiente e      * 
-* temperatura desejada são exibiros no diplay, sendo os    *
-* dois primeiros valores a temperatura a ambiente e os     *
-* dois ultimos a demperatura desejada.                     *
-* A ativação e desativação do aquecedor não                *
-* é instantânea, isso é proposital, para que isso só       *
-* ocorra quando a temperatura ambiente se estabilizou.     *
-*                                                          *
-* ATENÇÃO! Lembre-se de verificar se o relê suporta o      *                                            
-* aquecedor ligado a ele!                                  *
-*                                                          *  
-* Programa desenvolvido por: Daniel Tavares                *
-* dantavares@gmail.com                                     *
-*                                                          *
-* Você é livre para modificar e usar esse código, só peço  *
-* que mantenha a referência do meu nome nele, obrigado     *
-* por respeitar isso !                                     *
-***********************************************************/
+/ ***********************************************************
+* Positive thermostat, controlled by relay V1.0 
+* 
+* This project uses an NTC 10k thermistor as a sensor
+* room temperature, a TM1637 display to display
+* values and a potentiometer of 100k to set the
+* desired temperature.
+* 
+* Use a common heater connected to the relay, if 
+* temperature is not as desired, the relay will switch on 
+* heater, until it reaches the temperature set by 
+* potentiometer. The room temperature values and
+* desired temperature are displayed in the diplay, being the
+* first two values at room temperature and the
+* two last to the desired temperature.
+* Activation and deactivation of the heater does not
+* is instantaneous, this is purposeful, so that only 
+* occurs when the ambient temperature has stabilized. 
+* 
+* ATTENTION! Remember to verify that the relay supports 
+* heater connected to it! 
+* 
+* Program developed by: Daniel Tavares 
+* dantavares@gmail.com 
+* 
+* You are free to modify and use this code, just ask 
+* keep my name reference on it, thanks for respecting that! 
+************************************************************* /
 
-//Bibliotecas necessárias para compilar o código
+//Libraries needed to compile the code
 #include <TM1637Display.h>
 #include <Thermistor.h>
 
-//Esses valores são usados, pensando em usar um ATtiny85
+//These values are used, thinking about using an ATtiny85
 #define pot   A3 //Entrada analógica do potenciômetro
 #define term  A2 //Entrada analógica do termistor
 #define rele  0  //Saída digital para controle do relê
@@ -51,9 +50,9 @@ void setup() {
 
 void loop() {
   temp1 = temp.getTemp();
-  if (temp1 <= -10) temp1 = -9; //Limitação de apenas 1 digito para números negativos
+  if (temp1 <= -10) temp1 = -9; //Limit of only 1 digit for negative numbers
   potval1 = analogRead(pot);
-  potval1 = int(map(potval1,0,1022,10,40)); //Valor mínimo 10, valor máximo 40
+  potval1 = int(map(potval1,0,1022,10,40)); //Minimum value 10, maximum value 40
 
   if ((temp1 != temp2) || (potval1 != potval2)) {
     if (potval1 != potval2) disp.setBrightness(5,1);
@@ -67,7 +66,7 @@ void loop() {
     
   if (cnt) tmp++;
     
-  if (tmp >= 20) { //Espera de 10 segundos (considerando o delay de 0,5s) para setar o relê
+  if (tmp >= 20) { //Wait 10 seconds (considering the 0.5s delay) to set the relay
     if (potval1 > temp1) {
       digitalWrite(rele,1);        
     } else {
@@ -75,9 +74,9 @@ void loop() {
     }
     
     disp.setBrightness(0,1);
-    disp.showNumberDec(potval1,0,2,2); //Aparentemente tem que setar algo para o brilho do display mudar
+    disp.showNumberDec(potval1,0,2,2); //Apparently you have to set something for the display brightness to change state
     cnt = 0;
   }
   
-  delay(500); //Delay de 0,5 segundos para controle de fluxo do programa
+  delay(500); //0.5 second delay for program flow control
 }
