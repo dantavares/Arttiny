@@ -32,11 +32,11 @@
 #include <Thermistor.h>
 
 //These values are used, thinking about using an ATtiny85
-#define pot   A3 //Entrada analógica do potenciômetro
-#define term  A2 //Entrada analógica do termistor
-#define rele  0  //Saída digital para controle do relê
-#define CLK   1  //Pino CLK do TM1637
-#define DIO   2  //Pino DIO do TM1637
+#define pot   A3 //Analog potentiometer input
+#define term  A2 //Thermistor analog input
+#define rele  0  //Digital output for relay control
+#define CLK   1  //TM1637 CLK pin
+#define DIO   2  //TM1637 DIO pin
 
 int tmp = 0, temp1, temp2 = -100, potval1, potval2 = -1;
 bool cnt = 1;
