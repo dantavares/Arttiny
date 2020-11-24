@@ -1,19 +1,11 @@
-/*
- * Arduino code to communicate with xbox 360 RF module.
- * Original work by (yaywoop) / additional ideas from Alexander Martinez - modified by dilandou (www.dilandou.com, www.diru.org/wordpress)
- * First sends LED initialisation code followed by LED startup animation code, then sleeps until a button press for sync command.
- * RF module must be powered with 3.3V, two diodes in series with USB 5v will do. Connect the USB wires to a host computer, and the data and serial wires to Arduino.
- * of course, make sure to have a common ground 
- * Conversion to Attiny13 by Daniel Tavares (dantavares@gmail.com)
- */
-
 #include <avr/sleep.h>
 #include <avr/interrupt.h>
 
-const int sync_pin = 3;  //power button repurposed for sync button (pin 5 on the module), don't change!
+const int sync_pin = 3;  //power button repurposed for sync button (pin 5 on the module), don't change it!
 const int data_pin = 2;  //data line (pin 6 on the module)
 const int clock_pin = 1; //clock line (pin 7 on module) 
 
+// All known commands are in the "Control bus protocol" file
 int led_cmd[10] =     {0, 0, 1, 0, 0, 0, 0, 1, 0, 0}; //Activates/initialises the LEDs, leaving the center LED lit. 
 int sync_cmd[10] =    {0, 0, 0, 0, 0, 0, 0, 1, 0, 0}; //Initiates the sync process.
 
@@ -50,7 +42,7 @@ void sleep() {
     sei();                                  // Enable interrupts
 }
 
-ISR(PCINT0_vect) {
+ISR(PCINT0_vect) { // This function will be executed after ATtiny wake up
   sendData(sync_cmd);      
 }
 
@@ -76,7 +68,7 @@ void setup() {
 }
 
 void loop() {
-  if (!(digitalRead(sync_pin))) {
+  if (!(digitalRead(sync_pin))) { // Will only sleep if the sync button is not being pressed.
     sleep();
   }
 }
