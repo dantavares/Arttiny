@@ -12,7 +12,7 @@ https://www.microsoft.com/accessories/en-in/d/xbox-360-controller-for-windows
 And follow these steps:
 https://github.com/dantavares/Arttiny/blob/main/RF_XBOX360/HOW-TO_Wireless-Xbox360-controller-on-Windows.pdf
 
-Conversion to Attiny by Daniel Tavares
+Conversion to Attiny by Daniel Tavares.
 This project fits on an ATtiny13, use the internal 1.2Mhz oscillator.
 
 ![board](https://github.com/dantavares/Arttiny/blob/main/RF_XBOX360/board.jpg?raw=true?raw=true)
