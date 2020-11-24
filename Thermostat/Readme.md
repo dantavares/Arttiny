@@ -10,24 +10,17 @@ ATTENTION! Remember to verify that the relay supports heater connected to it!
  
 You are free to modify and use this code, just ask keep my name reference on it, thanks for respecting that! 
 
-I did not do a complete schematics to set up this project, sorry 
-But you can still use the images attached in this project to  serve as a reference:
+I did not do a complete schematics to set up this project, sorry. 
+But you can still use the images attached in this project to serve as a reference:
 
 ## Potentiometer:
-
 ![Potentiometer](https://github.com/dantavares/Arttiny/blob/main/Thermostat/potentiometer.jpg?raw=true)
 
-
 ## Relay:
-
 ![Relay](https://github.com/dantavares/Arttiny/blob/main/Thermostat/relay.png?raw=true)
 
-
 ## Display:
-
 ![Display](https://github.com/dantavares/Arttiny/blob/main/Thermostat/TM1637-4-digit-7-segment-display-pinout.jpg?raw=true)
 
-
 ## Thermistor:
-
 ![Display](https://github.com/dantavares/Arttiny/blob/main/Thermostat/thermistor.jpg?raw=true)
