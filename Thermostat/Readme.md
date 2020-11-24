@@ -1,4 +1,4 @@
-## Positive thermostat, controlled by relay
+# Positive thermostat, controlled by relay
 
 This project uses an NTC 10k thermistor as a sensor room temperature, a TM1637 display to display values and a potentiometer of 100k to set the desired temperature.
  
@@ -13,14 +13,21 @@ You are free to modify and use this code, just ask keep my name reference on it,
 I did not do a complete schematics to set up this project, sorry 
 But you can still use the images attached in this project to  serve as a reference:
 
-Potentiometer:
+## Potentiometer:
+
 ![Potentiometer](https://github.com/dantavares/Arttiny/blob/main/Thermostat/potentiometer.jpg?raw=true)
 
-Relay:
-![enter image description here](https://github.com/dantavares/Arttiny/blob/main/Thermostat/relay.png?raw=true)
 
-Display:
-![enter image description here](https://github.com/dantavares/Arttiny/blob/main/Thermostat/TM1637-4-digit-7-segment-display-pinout.jpg?raw=true)
+## Relay:
 
-Thermistor:
-![enter image description here](https://github.com/dantavares/Arttiny/blob/main/Thermostat/thermistor.jpg?raw=true)
+![Relay](https://github.com/dantavares/Arttiny/blob/main/Thermostat/relay.png?raw=true)
+
+
+## Display:
+
+![Display](https://github.com/dantavares/Arttiny/blob/main/Thermostat/TM1637-4-digit-7-segment-display-pinout.jpg?raw=true)
+
+
+## Thermistor:
+
+![Display](https://github.com/dantavares/Arttiny/blob/main/Thermostat/thermistor.jpg?raw=true)
