@@ -24,3 +24,6 @@ But you can still use the images attached in this project to serve as a referenc
 
 ## Thermistor:
 ![Display](https://github.com/dantavares/Arttiny/blob/main/Thermostat/thermistor.jpg?raw=true)
+
+## Finished
+![finished](https://github.com/dantavares/Arttiny/blob/main/Thermostat/finished.jpeg?raw=true)
