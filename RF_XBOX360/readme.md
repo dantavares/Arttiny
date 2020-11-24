@@ -11,7 +11,7 @@ On Windows you will need to install the necessary drivers, to do this download d
 https://www.microsoft.com/accessories/en-in/d/xbox-360-controller-for-windows
 
 And follow these steps:
-
+https://github.com/dantavares/Arttiny/blob/main/RF_XBOX360/HOW-TO_Wireless-Xbox360-controller-on-Windows.pdf
 
 Conversion to Attiny13 by Daniel Tavares
 
