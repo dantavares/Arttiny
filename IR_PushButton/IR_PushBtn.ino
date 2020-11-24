@@ -1,27 +1,13 @@
-/* Ver 2.1
- *  
- * Este programa usa um ATtiny85 para inverter o sinal digital de um botão físico por 100ms,
- * simulando um toque, quando detectado um comando de um controle remoto, préviamente programado.
- * Com isso é possível usar um controle remoto por infra vermelho, em um equipamento que não 
- * tenha um. Em geral por ser usado qualquer controle remoto IR, inclusive uma tecla que não é
- * usada (ou pouco usada), não tendo necessidade de ter um controle remoto exclusivo para ele.
- * 
- * Para programar o controle remoto:
- * 1º - Precione o botão físico e segure
- * 2º - Precione a tecla desejada do controle remoto
- * 3º - Continue segurando por 2 segundos
- * 4º - Solte o botão físico
- * 5º - Faça o teste, se necessário repita o procedimento
- * 
- * O código da tecla será gravado permanentemente, até que uma nova tecla seja reprogramada.
- */
-
 #include <IRremote.h>
-#include <EEPROM.h>
+//https://github.com/z3t0/Arduino-IRremote
 
-const byte SW = 0;      //Pino do botao
-const byte IrPin = 1;   //Pino do sensor IR 
-const bool NorSta = 1;  //Estado normal do botão: 1 para alta ou 0 para baixa
+#include <EEPROM.h>
+//https://github.com/Chris--A/EEPROM
+
+const byte SW = 0;      //Pin to be connected in parallel to the button
+const byte IrPin = 1;   //CI Pin Infrared Sensor
+
+const bool NorSta = 1;  //Normal button state: 1 for high or 0 for low
 
 IRrecv irrecv(IrPin);   
 decode_results results;
@@ -56,7 +42,6 @@ void loop() {
     }
 }
 
-//Código para gravar e ler na EEPROM
 unsigned long EEPROM_readlong(int address) {
   unsigned long dword = EEPROM_readint(address);
   dword = dword << 16;
@@ -77,7 +62,6 @@ unsigned int EEPROM_readint(int address) {
   return word;
 }
 
-//Código do delay
 void nop_delay(uint16_t us) {
   #define NOP __asm__ __volatile__ ("nop")
   while (us != 0) {
