@@ -1,35 +1,9 @@
-/ ***********************************************************
-* Positive thermostat, controlled by relay V1.0 
-* 
-* This project uses an NTC 10k thermistor as a sensor
-* room temperature, a TM1637 display to display
-* values and a potentiometer of 100k to set the
-* desired temperature.
-* 
-* Use a common heater connected to the relay, if 
-* temperature is not as desired, the relay will switch on 
-* heater, until it reaches the temperature set by 
-* potentiometer. The room temperature values and
-* desired temperature are displayed in the diplay, being the
-* first two values at room temperature and the
-* two last to the desired temperature.
-* Activation and deactivation of the heater does not
-* is instantaneous, this is purposeful, so that only 
-* occurs when the ambient temperature has stabilized. 
-* 
-* ATTENTION! Remember to verify that the relay supports 
-* heater connected to it! 
-* 
-* Program developed by: Daniel Tavares 
-* dantavares@gmail.com 
-* 
-* You are free to modify and use this code, just ask 
-* keep my name reference on it, thanks for respecting that! 
-************************************************************* /
-
 //Libraries needed to compile the code
+
 #include <TM1637Display.h>
+// https://github.com/avishorp/TM1637
 #include <Thermistor.h>
+// https://github.com/ItKindaWorks/libraries/tree/master/Thermistor
 
 //These values are used, thinking about using an ATtiny85
 #define pot   A3 //Analog potentiometer input
