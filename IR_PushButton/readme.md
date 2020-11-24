@@ -7,3 +7,5 @@ The idea is to make this logical inversion (high to low or low to high) through 
 Summarizing the idea of this project is to adapt an infrared remote control, in a device that originally does not have a remote control, without making major changes. In this version it is possible to control only one button, so it is necessary to have one ATtiny per button to be controlled remotely.
 
 It is important to note that the physical button will not lose its functionality, since ATtiny will be connected in parallel to it, so there is no need to remove it.
+
+You need to find out by a multimeter, whether the signal is high or low before pressing it, and what happens when pressing it. If the signal is reversed, this project will probably work. Check the normal signal (without pressing the button) is correct in the code.
