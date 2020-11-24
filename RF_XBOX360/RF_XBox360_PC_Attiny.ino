@@ -6,8 +6,8 @@ const int data_pin = 2;  //data line (pin 6 on the module)
 const int clock_pin = 1; //clock line (pin 7 on module) 
 
 // All known commands are in the "Control bus protocol" file
-int led_cmd[10] =     {0, 0, 1, 0, 0, 0, 0, 1, 0, 0}; //Activates/initialises the LEDs, leaving the center LED lit. 
-int sync_cmd[10] =    {0, 0, 0, 0, 0, 0, 0, 1, 0, 0}; //Initiates the sync process.
+int led_cmd[10]  = {0, 0, 1, 0, 0, 0, 0, 1, 0, 0}; //Activates/initialises the LEDs, leaving the center LED lit. 
+int sync_cmd[10] = {0, 0, 0, 0, 0, 0, 0, 1, 0, 0}; //Initiates the sync process.
 
 void sendData(int cmd_do[]) {
   pinMode(data_pin, OUTPUT);
