@@ -1,5 +1,5 @@
 # Arttiny
-Cool projects with Attiny built from Arduino IDE
+## Cool projects with Attiny built from Arduino IDE
 
 All projects here are compiled and recorded using the Arduino IDE together with the ATtiny libraries. I don't use any Attiny other than Attiny85 or 13, but you can try others, the Arduino compiler will inform you if the compiled firmware will be compatible.
 
