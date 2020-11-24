@@ -11,10 +11,9 @@ int sync_cmd[10] = {0, 0, 0, 0, 0, 0, 0, 1, 0, 0}; //Initiates the sync process.
 
 void sendData(int cmd_do[]) {
   pinMode(data_pin, OUTPUT);
-  digitalWrite(data_pin, LOW);    //start sending data.
+  digitalWrite(data_pin, LOW);  //start sending data.
   int prev = 1;
   for (int i = 0; i < 10; i++) {
-
     while (prev == digitalRead(clock_pin)) {} //detects change in clock
     prev = digitalRead(clock_pin);
     // should be after downward edge of clock, so send bit of data now
