@@ -10,4 +10,15 @@ It is important to note that the physical button will not lose its functionality
 
 You need to find out by a multimeter, whether the signal is high or low before pressing it, and what happens when pressing it. If the signal is reversed, this project will probably work. Check the normal signal (without pressing the button) is correct in the code.
 
+## To program the remote control:
+
+1. Press the physical button and hold
+2. Press the desired button on the remote control
+3. Keep holding for 2 seconds
+4. Release the physical button
+5. Do the test, if necessary repeat the procedure
+  
+The key code will be saved permanently, until a new key is reprogrammed.
+
+## Schematics
 ![circuit](https://github.com/dantavares/Arttiny/blob/main/IR_PushButton/circuit.png?raw=true)
