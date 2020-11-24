@@ -4,8 +4,7 @@ With this project you will be able to recycle an RF module of the XBOX 360, (fro
 
 Original work by (yaywoop) / additional ideas from Alexander Martinez - modified by dilandou (www.dilandou.com, www.diru.org/wordpress)
 Sends LED initialisation code, then sleeps until a button press for sync command.
-RF module must be powered with 3.3V, two diodes in series with USB 5v will do. Connect the USB wires to a host computer, and the data and serial wires to Arduino.
-of course, make sure to have a common ground 
+RF module must be powered with 3.3V, two diodes in series with USB 5v will do. Connect the USB wires to a host computer, and make sure to have a common ground 
 
 On Windows you will need to install the necessary drivers, to do this download driver on MS:
 https://www.microsoft.com/accessories/en-in/d/xbox-360-controller-for-windows
