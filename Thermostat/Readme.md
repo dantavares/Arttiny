@@ -8,7 +8,7 @@ Activation and deactivation of the heater does not is instantaneous, this is pur
 
 ATTENTION! Remember to verify that the relay supports heater connected to it! 
  
-You are free to modify and use this code, just ask keep my name reference on it, thanks for respecting that! 
+This project fits on an ATtiny85.
 
 I did not do a complete schematics to set up this project, sorry. 
 But you can still use the images attached in this project to serve as a reference:
