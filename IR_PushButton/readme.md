@@ -10,6 +10,8 @@ It is important to note that the physical button will not lose its functionality
 
 You need to find out by a multimeter, whether the signal is high or low before pressing it, and what happens when pressing it. If the signal is reversed, this project will probably work. Check the normal signal (without pressing the button) is correct in the code.
 
+Set fuses at 8Mhz.
+
 ## To program the remote control:
 
 1. Press the physical button and hold
