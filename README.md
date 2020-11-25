@@ -9,7 +9,7 @@ ATtiny13:
 https://github.com/MCUdude/MicroCore
 
 ATtiny85:
-https://github.com/SpenceKonde/ATTinyCore
+https://github.com/SpenceKonde/ATTinyCore or https://github.com/damellis/attiny
 
 You don't need to buy a recorder to use Attiny, you can do it yourself! Follow the instructions here:
 https://www.instructables.com/ATtiny-Programmer-Board-ArduinoUNO-As-ISP/
